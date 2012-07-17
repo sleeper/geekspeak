@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Geek's speaks</title>
+    <link rel="stylesheet" href="css/app/css/main.css"/>
+  </head>
+  <body ng-app="GeekSpeak">
+    <h1> {{ 'fred' | greet }}</h1>
+    <div ng-controller="SelectedTalksCtrl">
+      <h2>Selected Talks for next session</h2>
+      <ul>
+        <li ng-repeat="talk in talks">
+        {{talk.name}} by {{talk.presenter}} (proposed by: {{talk.proposed_by}})</p>
+        </li>
+      </ul>
+    </div>
+    <div ng-controller="ProposedTalksCtrl">
+      <h2>Proposed Talks</h2>
+      <ul>
+        <li ng-repeat="talk in talks">
+        {{talk.name}} by {{talk.presenter}} (proposed by: {{talk.proposed_by}})</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div ng-view></div>
+
+  <div>Angular seed app: v<span app-version></span></div>
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/geekspeak.js"></script>
+</body>
+</html>
