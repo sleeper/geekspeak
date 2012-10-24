@@ -12,8 +12,11 @@
 			<h3> Next session</h3>
 		</div>
 		<h3> Proposed speaks</h3>
-	  	<ul>
-  			<li ng-repeat="talk in activeTalks|orderBy:'-votes'"> "{{talk.title}}" by {{talk.presenter}} ({{talk.votes}})<button class="btn" ng-click="increaseVotes(talk)"><i class="icon-plus"></i></button></li>
+	  	<ul class="unstyled">
+  			<li ng-repeat="talk in activeTalks|orderBy:'-votes'" class="well well-large" ng-mouseover="show_comment = true" ng-mouseleave="show_comment = false"> 
+  				<span class="lead">{{talk.title}}</span> by {{talk.presenter}} ({{talk.votes}}) <button class="btn-mini pull-right" disabled="{{talk.voted}}" ng-click="increaseVotes(talk)"><i class="icon-thumbs-up pull-right" ></i></button>
+  				<p ng-show="show_comment">{{talk.comments}}</p>
+  			</li>
   		</ul>
 	</div>
 	<div class="span2"> Right menu</div>
