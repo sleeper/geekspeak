@@ -30,11 +30,4 @@ geekspeakApp.controller('MainCtrl', function($scope) {
   ];
 
   $scope.isDisabled = false;
-
-  $scope.increaseVotes = function(t) { 
-  	t.votes += 1; 
-  	t.voted = true;
-  }
-
-
 });

@@ -1,0 +1,5 @@
+<div class="well well-large" ng-init="show_comment = true" ng-mouseover="show_comment = true" ng-mouseleave="show_comment = false"> 
+	<span class="lead">{{talk.title}}</span> by {{talk.presenter}} ({{talk.votes}}) 
+	<button class="btn-mini pull-right" disabled="{{talk.voted}}" ng-click="talk.votes = talk.votes + 1"><i class="icon-thumbs-up pull-right" ></i></button>
+  	<p ng-show="show_comment">{{talk.comments}}</p>
+ </div>
