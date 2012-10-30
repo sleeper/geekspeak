@@ -7,19 +7,17 @@
 	</div>
 </div>
 <div class="container-fluid">
-	<div class="span10">
+	<div class="span11">
 		<div>
 			<h3> Next session</h3>
 		</div>
 		<h3> Proposed speaks</h3>
-	  	<!--ul class="unstyled">
-  			<li ng-repeat="talk in activeTalks|orderBy:'-votes'" class="well well-large" ng-mouseover="show_comment = true" ng-mouseleave="show_comment = false"> 
-  				<span class="lead">{{talk.title}}</span> by {{talk.presenter}} ({{talk.votes}}) <button class="btn-mini pull-right" disabled="{{talk.voted}}" ng-click="increaseVotes(talk)"><i class="icon-thumbs-up pull-right" ></i></button>
-  				<p ng-show="show_comment">{{talk.comments}}</p>
+  		<ul class="unstyled">
+  			<li ng-repeat="t in activeTalks|orderBy:'-votes'">
+  				<talk talk="t"></talk>
   			</li>
-  		</ul-->
-  		<talk ng-repeat="t in activeTalks|orderBy:'-votes'" talk="t"></talk>
+  		</ul>
 	</div>
-	<div class="span2"> Right menu</div>
+	<div class="span1"> Right menu</div>
 </div>
 
